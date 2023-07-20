@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <title>hehehw</title>
+    <style>
+        body {
+            background-color: white;
+            transition: 1000ms ease-in;
+            font-family: Arial;
+        }
+        h1 {
+            font-size: 100px;
+        }
+        div {
+            background-color: gray;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <p id="h">
+        h
+    </p>
+    <h1 id="h1">ff</h1>
+    <div onmouseover="changeBackground();">
+        <p>
+            hehe
+        </p>
+    </div>
+    <script>
+        let bodystyle = document.body.style;
+        bodystyle.backgroundColor = "white";
+        let height = window.screen.availHeight;
+        let h1 = document.getElementById("h1");
+        let p = document.getElementById("h");
+
+        changeText = function(changeto) {
+            h1.innerHTML = changeto;
+            p.innerHTML = bodystyle.backgroundColor;
+        }
+
+        changeBackground = function() {
+            if (bodystyle.backgroundColor == "black") {
+                bodystyle.backgroundColor = "white";
+                bodystyle.color = "black";
+
+                setTimeout(changeText, 660, "ff");
+            } else {
+                bodystyle.backgroundColor = "black";
+                bodystyle.color = "white";
+                setTimeout(changeText, 660, height);
+            }
+        }
+    </script>
+</body>
+</html>
