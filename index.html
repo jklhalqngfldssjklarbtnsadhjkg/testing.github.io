@@ -45,10 +45,12 @@
                 bodystyle.color = "black";
 
                 setTimeout(changeText, 660, "ff");
-            } else {
+            } else if(bodystyle.backgroundColor == "white") {
                 bodystyle.backgroundColor = "black";
                 bodystyle.color = "white";
                 setTimeout(changeText, 660, height);
+            } else {
+                break;
             }
         }
     </script>
